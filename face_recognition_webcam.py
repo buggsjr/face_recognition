@@ -53,7 +53,8 @@ while True:
             name = "Unknown"
             for i in range(0,len(match)):
                 if match[i]:
-                    name = images[i]
+                    nome = images[i].split(".jpg")
+                    name = nome[0]
                     break
 
             face_names.append(name)
