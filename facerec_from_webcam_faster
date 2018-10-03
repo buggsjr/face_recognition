@@ -1,7 +1,7 @@
 import os, sys
 import face_recognition
 import cv2
-from espeak import espeak
+from espeak import espeak #importa biblioteca espeak
 
 # This is a demo of running face recognition on live video from your webcam. It's a little more complicated than the
 # other example, but it includes some basic performance tweaks to make things run a lot faster:
@@ -29,7 +29,7 @@ face_names = []
 images_loaded = [None]*len(images)
 process_this_frame = True
 
-espeak.set_voice("pt")
+espeak.set_voice("pt") #configura o idioma para portugues
 
 
 #Automatizate the face_encoding part
@@ -59,7 +59,7 @@ while True:
                 if match[i]:
                     nome = images[i].split(".jpg")
                     name = nome[0]
-                    espeak.synth("Bem vindo " + name)
+                    espeak.synth("Bem vindo " + name) #se der match, o sintetizador de voz reproduz
                     break
 
             face_names.append(name)
